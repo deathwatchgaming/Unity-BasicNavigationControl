@@ -36,7 +36,6 @@ namespace NavigationControl
             // if _cursorEnabled is true
             if (_cursorEnabled == true)
             {
-
                 // _cursorImage gameObject SetActive is true
                 _cursorImage.gameObject.SetActive(true);
 
@@ -50,8 +49,7 @@ namespace NavigationControl
 
             // else if _cursorEnabled is false
             else if (_cursorEnabled == false) 
-            {
-                 
+            {                 
                 // _cursorImage gameObject SetActive is false
                 _cursorImage.gameObject.SetActive(false);
 
