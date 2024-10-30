@@ -60,6 +60,11 @@ Alpha Cutoff: 0.05
 * optional you can opt to use TMPinger-Marker.png instead that is found in the
   Textures directory.
 
+Also simply suggested as an example you can opt to color the Icon to whatever
+you like simply for example:
+
+Color: #FFFF00
+
 
 -----------------------------------------------------------------------------------
 
@@ -86,6 +91,12 @@ Alpha Cutoff: 0.5
 
 * optional you can opt to use TMPinger-Ping.png instead that is found in the
   Textures directory.
+
+Also simply suggested as an example you can opt to color the Pinger to whatever
+you like simply for example:
+
+Color: #FFFF00  (Use the RGBA equiv when setting up the animation later in the
+steps, else you can keep as is in the instructions to have the white ping)
 
 
 -----------------------------------------------------------------------------------
@@ -168,6 +179,15 @@ B: 0
 A: 0
 
 That completes that part for ping animation.
+
+NOTE:
+
+Also simply suggested as an example you can opt to color the Pinger to whatever
+you like simply for example:
+
+Color: #FFFF00  (Use the RGBA equiv when setting up the animation as suggested
+above if that suggestion makes sense, else you can keep as is in the
+instructions to have the white ping)
 
 
 -----------------------------------------------------------------------------------
