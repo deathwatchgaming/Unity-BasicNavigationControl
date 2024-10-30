@@ -11,6 +11,19 @@ Description:
 ![Preview](https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Previews/BasicNavigationControl-Preview.png)
 
 
+
+REPO NOTE: The purpose of this new repository was decided upon recently when
+revisiting the several individual repositories in the past that I had with a
+variant of each part of this as individual repositories (ie: Compass repo,
+Minimap repo, Test Stuff Controller repo) and opting now that was not as
+optimal as say now just cleaning up those old repos & files and then such
+remove such and now instead decide to simply just opt to have one repo with
+such in it as such makes more sense for organizational / management purposes.
+As such this will be the new repository for such simply provided as a
+starting point for users whom wish to use such in their projects and then
+improve upon such as they desire.
+
+
 Player Controls: 
 ----------------
 
