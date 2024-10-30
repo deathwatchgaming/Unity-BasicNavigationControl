@@ -51,11 +51,14 @@ Step 2: Create Material -> "Icon"
 
 2) Create new: "Material" named: "Icon"
 
-Albedo: Knob
+Albedo: Knob *
 
 Rendering Mode: Cutout
 
 Alpha Cutoff: 0.05
+
+* optional you can opt to use TMPinger-Marker.png instead that is found in the
+  Textures directory.
 
 
 -----------------------------------------------------------------------------------
@@ -65,7 +68,7 @@ Step 3: Import Texture and then Create Material -> "Ping"
 -----------------------------------------------------------------------------------
 
 
-3.A) Import Texture: "TacticalPing.png"
+3.A) Import Texture: "TacticalPing.png" *
 
 Texture Type: Sprite (2D and UI)
 
@@ -75,11 +78,14 @@ Select "Apply" to apply changes.
 
 3.B) Next, create a new: "Material" named: "Ping"
 
-Albedo: TacticalPing
+Albedo: TacticalPing *
 
 Rendering Mode: Cutout
 
 Alpha Cutoff: 0.5
+
+* optional you can opt to use TMPinger-Ping.png instead that is found in the
+  Textures directory.
 
 
 -----------------------------------------------------------------------------------
