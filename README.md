@@ -93,7 +93,7 @@ All Combined Documentation:
 ---------------------------
 
 
-* All combined documentation: (Writing in progress, coming soon...)
+* All combined documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Assets/NavigationControl/Documentation/NavigationControl-Documentation.txt
 
 
 
