@@ -12,6 +12,15 @@ Description:
 
 
 
+
+ The "Compass" and or "Minimap" need some sort of "Player Controller" to work
+ and are reliant on such, thus one would not be able to test such if they do
+ not already have one to test stufff with. As such provided is just a
+ simple "FirstPersonController" for testing stuff if the end-user needs such
+ and does not already have something.
+
+
+
 REPO NOTE: The purpose of this new repository was decided upon recently when
 revisiting the several individual repositories in the past that I had with a
 variant of each part of this as individual repositories (ie: Compass repo,
