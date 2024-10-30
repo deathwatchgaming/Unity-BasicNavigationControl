@@ -78,7 +78,7 @@ namespace NavigationControl
 				GetComponent<MinimapTacticalMarker>().enabled = true;
 
 				// Debug Log MinimapTacticalMarker enabled
-				Debug.Log("Minimap Tactical Marker is enabled.");
+				//Debug.Log("Minimap Tactical Marker is enabled.");
 
 				// if Input GetKeyUp KeyCode T
 				if (Input.GetKeyUp(KeyCode.T))
@@ -97,7 +97,7 @@ namespace NavigationControl
 				GetComponent<MinimapTacticalMarker>().enabled = false;
 
 				// Debug Log MinimapTacticalMarker is disabled
-				Debug.Log("Minimap Tactical Marker is disabled.");
+				//Debug.Log("Minimap Tactical Marker is disabled.");
 
 			} // close else if _tacticalMarkerEnabled is false
 

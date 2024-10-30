@@ -72,7 +72,7 @@ namespace NavigationControl
 				GetComponent<Compass>().enabled = true;
 
 				// Debug Log compass is enabled
-				Debug.Log("The compass is enabled");
+				//Debug.Log("The compass is enabled");
 
 			} // close if _compassEnabled is true
 
@@ -92,7 +92,7 @@ namespace NavigationControl
 				GetComponent<Compass>().enabled = false;
 
 				// Debug Log compass is disabled
-				Debug.Log("The compass is disabled");
+				//Debug.Log("The compass is disabled");
 
 			} // close else if _compassEnabled is false
 

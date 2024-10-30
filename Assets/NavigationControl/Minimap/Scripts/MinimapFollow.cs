@@ -108,7 +108,7 @@ namespace NavigationControl
 				GetComponent<MinimapFollow >().enabled = true;
 
 				// Debug Log
-				Debug.Log("The Minimap is enabled.");
+				//Debug.Log("The Minimap is enabled.");
 
 			} // close if _minimapEnabled is true
 
@@ -128,7 +128,7 @@ namespace NavigationControl
 				GetComponent<MinimapFollow >().enabled = false;
 
 				// Debug Log
-				Debug.Log("The Minimap is disabled.");
+				//Debug.Log("The Minimap is disabled.");
 
 			} // close else if _minimapEnabled is false
 			

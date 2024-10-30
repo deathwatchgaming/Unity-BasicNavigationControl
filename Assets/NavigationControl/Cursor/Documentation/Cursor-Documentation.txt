@@ -1,7 +1,7 @@
 Cursor Setup
 --------------------------------------------------------------------------------
 
-Description: Add a optionalcursor for your Unity Projects
+Description: Add a optional cursor for your Unity Projects
 
 
 Manual Setup Instruction:
