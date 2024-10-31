@@ -27,8 +27,8 @@ namespace NavigationControl
 
 			// Tooltip
 			[Tooltip("The bool to determine if tactical marker is enabled or disabled")]
-			// bool _tacticalMarkerEnabled
-			[SerializeField] private bool _tacticalMarkerEnabled = true;
+			// bool tacticalMarkerEnabled
+			public bool tacticalMarkerEnabled = true;
 
 		// Private
 
@@ -50,11 +50,17 @@ namespace NavigationControl
 		// string MARKER_ID
 		private string MARKER_ID = "*NONE*";  // This is to keep track of its existence in the world
 
+		//  MinimapTacticalMarker _minimapTacticalMarker
+		public static MinimapTacticalMarker _minimapTacticalMarker;		
+
 		// Start is use for initialization
 
 		// private void Start
 		private void Start()
 		{
+			// _minimapTacticalMarker
+			_minimapTacticalMarker = this;
+
 			// _firstPersonCamera
 			_firstPersonCamera = GetComponentInChildren<Camera>();
 
@@ -71,8 +77,8 @@ namespace NavigationControl
 		// private void Update
 		private void Update()
 		{
-			// if _tacticalMarkerEnabled is true
-			if (_tacticalMarkerEnabled == true)
+			// if tacticalMarkerEnabled is true
+			if (tacticalMarkerEnabled == true)
 			{
 				// GetComponent MinimapTacticalMarker is enabled
 				GetComponent<MinimapTacticalMarker>().enabled = true;
@@ -88,10 +94,10 @@ namespace NavigationControl
 
 				} // close if Input GetKeyUp KeyCode T
 
-			} // close if _tacticalMarkerEnabled is true
+			} // close if tacticalMarkerEnabled is true
 
-			// else if _tacticalMarkerEnabled is false
-			else if (_tacticalMarkerEnabled == false)
+			// else if tacticalMarkerEnabled is false
+			else if (tacticalMarkerEnabled == false)
 			{
 				// GetComponent MinimapTacticalMarker is not enabled
 				GetComponent<MinimapTacticalMarker>().enabled = false;
@@ -99,7 +105,7 @@ namespace NavigationControl
 				// Debug Log MinimapTacticalMarker is disabled
 				//Debug.Log("Minimap Tactical Marker is disabled.");
 
-			} // close else if _tacticalMarkerEnabled is false
+			} // close else if tacticalMarkerEnabled is false
 
 		} // close private void Update
 

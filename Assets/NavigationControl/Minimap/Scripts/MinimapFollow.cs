@@ -55,7 +55,7 @@ namespace NavigationControl
 			// Tooltip
 			[Tooltip("Enable or disable the minimap")]
 			// bool _minimapEnabled
-			[SerializeField] private bool _minimapEnabled = true;
+			public bool minimapEnabled = true;
 
 		// Private
 
@@ -68,11 +68,16 @@ namespace NavigationControl
 		// Transform _playerParent
 		private Transform _playerParent;
 
+		// MinimapFollow _minimapFollow
+		public static MinimapFollow _minimapFollow;		
+
 		// Start is use for initialization
 
 		// private void Start
 		private void Start()
 		{
+			_minimapFollow = this;
+
 			// _player
 			_player = GameObject.FindGameObjectWithTag("Player");
 
@@ -92,8 +97,8 @@ namespace NavigationControl
 		// private void Update
 		private void Update()
 		{
-			// if _minimapEnabled is true
-			if (_minimapEnabled == true)
+			// if minimapEnabled is true
+			if (minimapEnabled == true)
 			{
 				// _minimapMask gameObject
 				_minimapMask.gameObject.SetActive(true);
@@ -110,10 +115,10 @@ namespace NavigationControl
 				// Debug Log
 				//Debug.Log("The Minimap is enabled.");
 
-			} // close if _minimapEnabled is true
+			} // close if minimapEnabled is true
 
-			// else if _minimapEnabled is false
-			else if (_minimapEnabled == false)
+			// else if minimapEnabled is false
+			else if (minimapEnabled == false)
 			{
 				// _minimapMask gameObject
 				_minimapMask.gameObject.SetActive(false);
@@ -130,7 +135,7 @@ namespace NavigationControl
 				// Debug Log
 				//Debug.Log("The Minimap is disabled.");
 
-			} // close else if _minimapEnabled is false
+			} // close else if minimapEnabled is false
 			
 		} // close private void Update
 

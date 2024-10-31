@@ -50,14 +50,25 @@ namespace NavigationControl
 
 			// Tooltip
 			[Tooltip("The compass enabled state")]
-			// bool _compassEnabled
-			[SerializeField] private bool _compassEnabled = true;
+			// bool compassEnabled
+			public bool compassEnabled = true;
+
+		// Compass _Compass
+		public static Compass _compass;
+
+		// private void Start
+		private void Start()
+		{
+			// _compass
+			_compass = this;
+			
+		} // close private void Start
 
 		// private void Update
 		private void Update()
 		{
-			// if _compassEnabled is true
-			if (_compassEnabled == true)
+			// if compassEnabled is true
+			if (compassEnabled == true)
 			{
 				// _compassDirection game object is active
 				_compassDirection.gameObject.SetActive(true);
@@ -74,10 +85,10 @@ namespace NavigationControl
 				// Debug Log compass is enabled
 				//Debug.Log("The compass is enabled");
 
-			} // close if _compassEnabled is true
+			} // close if compassEnabled is true
 
-			// else if _compassEnabled is false
-			else if (_compassEnabled == false)
+			// else if compassEnabled is false
+			else if (compassEnabled == false)
 			{
 				// _compassDirection game object is not active
 				_compassDirection.gameObject.SetActive(false);
@@ -94,7 +105,7 @@ namespace NavigationControl
 				// Debug Log compass is disabled
 				//Debug.Log("The compass is disabled");
 
-			} // close else if _compassEnabled is false
+			} // close else if compassEnabled is false
 
 			// Get a handle on the image's uvRect
 

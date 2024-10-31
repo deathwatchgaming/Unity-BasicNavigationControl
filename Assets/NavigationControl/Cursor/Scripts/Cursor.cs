@@ -24,17 +24,27 @@ namespace NavigationControl
         [Header("Enabled State")]
 
             [Tooltip("Is the cursor enabled or disabled")]
-            //  bool _cursorEnabled
-            [SerializeField] private bool _cursorEnabled = true;
-        
+            // bool cursorEnabled
+            public bool cursorEnabled = true;
+
+        // Cursor _cursor
+        public static Cursor _cursor;
+
         // Update is called once per frame
+
+        // private void Start
+        private void Start()
+        {
+            // _cursor
+            _cursor = this;
+            
+        } // close private void Start
 
         // private void Update
         private void Update()
         {
-
-            // if _cursorEnabled is true
-            if (_cursorEnabled == true)
+            // if cursorEnabled is true
+            if (cursorEnabled == true)
             {
                 // _cursorImage gameObject SetActive is true
                 _cursorImage.gameObject.SetActive(true);
@@ -45,10 +55,10 @@ namespace NavigationControl
                 // Debug Log Cursor is enabled
                 //Debug.Log("The Cursor is enabled.");
 
-            } // close if _cursorEnabled is true
+            } // close if cursorEnabled is true
 
-            // else if _cursorEnabled is false
-            else if (_cursorEnabled == false) 
+            // else if cursorEnabled is false
+            else if (cursorEnabled == false) 
             {                 
                 // _cursorImage gameObject SetActive is false
                 _cursorImage.gameObject.SetActive(false);
@@ -59,7 +69,7 @@ namespace NavigationControl
                 // Debug Log Cursor is disabled
                 //Debug.Log("The Cursor is disabled.");
 
-            } // close else if _cursorEnabled is false
+            } // close else if cursorEnabled is false
 
         } // close private void Update
 
