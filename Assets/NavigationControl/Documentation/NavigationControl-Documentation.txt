@@ -761,7 +761,6 @@ Height: 23
 Source Image: CompassChevron
 
 
-
 In: "Compass" let us compensate for the adding of chevron icon for example:
 
 "CompassDegreeText"
@@ -785,6 +784,15 @@ Pos X: -357
 Pos Y: 317
 
 Font Size: 48
+
+Lastly:
+
+
+On "Compass" add the "Compass Chevron (Script)"
+
+
+Chevron Icon: Compass_Checron (Image)
+Chevron Enabled: Checked
 
 
 -----------------------------------------------------------------------------------

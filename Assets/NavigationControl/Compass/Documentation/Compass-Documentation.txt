@@ -371,6 +371,16 @@ Pos Y: 317
 Font Size: 48
 
 
+Lastly:
+
+
+On "Compass" add the "Compass Chevron (Script)"
+
+
+Chevron Icon: Compass_Checron (Image)
+Chevron Enabled: Checked
+
+
 ----------------------------------------------------------------------------------------
 
 Add Cursor Icon (Optional) : Create in Interface -> Canvas -> Cursor -> Cursor Image (RawImage)
