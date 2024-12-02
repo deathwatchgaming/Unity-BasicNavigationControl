@@ -652,7 +652,7 @@ Texture: MiniMapTexture
 
 -----------------------------------------------------------------------------------
 
-Step 21 (Optional *): Create in Canvas -> Cursor (Holder) -> Cursor_Image (RawImage)
+Step 21 A (Optional *): Create in Canvas -> Cursor (Holder) -> Cursor_Image (RawImage)
 
 -----------------------------------------------------------------------------------
 
@@ -722,6 +722,69 @@ For -> Cursor (Script):
 Script: Cursor
 Cursor Image : Cursor_Image (Raw Image)
 Cursor Enabled: Check * Checked by default
+
+
+----------------------------------------------------------------------------------------
+
+Step 21 B (Optional *): Create in Interface -> Canvas -> Compass -> CompassChevron (Image)
+
+----------------------------------------------------------------------------------------
+
+
+* Note: this step is optional and is up to your preference.
+
+* Also Note: If you have already applied this say for example via the compass
+  setup instructions, then you can simply ignore/skip this step and simply
+  continue on to step 22.
+
+
+A) Add / import the image file found in the extras directory into your project
+
+Import as: Sprite (2D and UI)
+Sprite Mode: Single
+Compression: None
+
+B) In Interface > Canvas > Compass: as a child of, add a UI "Image:"
+
+Rename "Image" to: Compass_Chevron
+
+Rect Transform:
+
+Top Center
+
+Pos X: -357
+Pos Y: 377
+
+Width: 38
+Height: 23
+
+Source Image: CompassChevron
+
+
+
+In: "Compass" let us compensate for the adding of chevron icon for example:
+
+"CompassDegreeText"
+
+Rect Transform:
+
+Pos X: 357
+Pos Y: -527
+
+
+In: 
+
+"Compass_DegreeText" let us compensate for the adding of chevron icon for example:
+
+
+"Compass_DegreeText"
+
+Rect Transform:
+
+Pos X: -357
+Pos Y: 317
+
+Font Size: 48
 
 
 -----------------------------------------------------------------------------------
