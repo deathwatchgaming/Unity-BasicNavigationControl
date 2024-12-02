@@ -104,6 +104,70 @@ Alignment: Center & Top
 Overflow: Overflow
 
 
+Next step, we add the "Compass Chevron Icon": 
+
+
+Create in Interface -> Canvas -> Compass: "CompassChevron (Image)"
+
+
+A) Add / import the image file found in the textures directory into your project
+
+Import as: Sprite (2D and UI)
+Sprite Mode: Single
+Compression: None
+
+B) In Interface > Canvas > Compass: as a child of, add a UI -> "Image:"
+
+Rename "Image" to: "Compass_Chevron"
+
+Rect Transform:
+
+Top Center
+
+Pos X: -357
+Pos Y: 377
+
+Width: 38
+Height: 23
+
+Source Image: CompassChevron
+
+
+In: 
+
+"Compass" let us compensate for the adding of chevron icon for example:
+
+"Compass"
+
+Rect Transform:
+
+Pos X: 357
+Pos Y: -527
+
+
+In: 
+
+"Compass_DegreeText" let us compensate for the adding of chevron icon for example:
+
+"Compass_DegreeText"
+
+Rect Transform:
+
+Pos X: -357
+Pos Y: 317
+
+Font Size: 48
+
+
+Lastly:
+
+
+On "Compass" edit:
+
+Chevron Icon: Compass_Chevron (Image)
+Chevron Enabled: Checked
+
+
 ------------------------------------------------------------------------------------
 
 Step 3: RawImage 1
@@ -212,11 +276,17 @@ Step 5: Add Component / Script
 For -> Compass (Script):
 --------------------------------
 
+
 Script: Compass.cs
-Compass IMG: Compass_Foreground (Raw Image)
-Compass BG: Compass_Background (Raw Image)
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Chevron Icon: Compass_Chevron (Image)
 Player: Player (Transform)
 Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Background Enabled: Check this 
+Foreground Enabled: Check this 
+Text Enabled: Check this 
+Chevron Enabled: Check this 
 Compass Enabled: Check this 
 
 
@@ -313,72 +383,6 @@ Height: 77
 
 
 Alright, now that is it for that! Simple enough, right?! Best of Luck!
-
-
-----------------------------------------------------------------------------------------
-
-Add Compass Chevron (Optional) : Create in Interface -> Canvas -> Compass -> CompassChevron (Image)
-
-----------------------------------------------------------------------------------------
-
-
-A) Add / import the image file found in the extras directory into your project
-
-Import as: Sprite (2D and UI)
-Sprite Mode: Single
-Compression: None
-
-B) In Interface > Canvas > Compass: as a child of, add a UI "Image:"
-
-Rename "Image" to: Compass_Chevron
-
-Rect Transform:
-
-Top Center
-
-Pos X: -357
-Pos Y: 377
-
-Width: 38
-Height: 23
-
-Source Image: CompassChevron
-
-
-
-In: "Compass" let us compensate for the adding of chevron icon for example:
-
-"CompassDegreeText"
-
-Rect Transform:
-
-Pos X: 357
-Pos Y: -527
-
-
-In: 
-
-"Compass_DegreeText" let us compensate for the adding of chevron icon for example:
-
-
-"Compass_DegreeText"
-
-Rect Transform:
-
-Pos X: -357
-Pos Y: 317
-
-Font Size: 48
-
-
-Lastly:
-
-
-On "Compass" add the "Compass Chevron (Script)"
-
-
-Chevron Icon: Compass_Checron (Image)
-Chevron Enabled: Checked
 
 
 ----------------------------------------------------------------------------------------

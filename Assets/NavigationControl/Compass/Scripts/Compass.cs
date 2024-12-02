@@ -30,6 +30,14 @@ namespace NavigationControl
 			[SerializeField] private RawImage _compassBackground;	
 
 		// Header
+		[Header("Image")]
+
+			// Tooltip
+			[Tooltip("The compass chevron image")]
+			// Image _chevronIcon
+			[SerializeField] private Image _chevronIcon;
+
+		// Header
 		[Header("Transform")]
 
 			// Tooltip
@@ -46,10 +54,30 @@ namespace NavigationControl
 			[SerializeField] private TMP_Text _compassDirection;
 
 		// Header
-		[Header("Enabled State")]						
+		[Header("Enabled State")]	
 
 			// Tooltip
-			[Tooltip("The compass enabled state")]
+			[Tooltip("The compass background image enabled state")]
+			// bool backgroundEnabled
+			public bool backgroundEnabled = true;
+
+			// Tooltip
+			[Tooltip("The compass foreground image enabled state")]
+			// bool foregroundEnabled
+			public bool foregroundEnabled = true;
+
+			// Tooltip
+			[Tooltip("The compass direction text enabled state")]
+			// bool textEnabled
+			public bool textEnabled = true;
+
+			// Tooltip
+			[Tooltip("The compass chevron icon enabled state")]
+			// bool chevronEnabled
+			public bool chevronEnabled = true;
+					
+			// Tooltip
+			[Tooltip("The compass component enabled state")]
 			// bool compassEnabled
 			public bool compassEnabled = true;
 
@@ -70,40 +98,134 @@ namespace NavigationControl
 			// if compassEnabled is true
 			if (compassEnabled == true)
 			{
-				// _compassDirection game object is active
-				_compassDirection.gameObject.SetActive(true);
-
-				// _compassBackground game object is active
-				_compassBackground.gameObject.SetActive(true);
-
-				// _compassForeground game object is active
-				_compassForeground.gameObject.SetActive(true);
-
 				// Get Component Compass is enabled
 				GetComponent<Compass>().enabled = true;
 
 				// Debug Log compass is enabled
 				//Debug.Log("The compass is enabled");
 
+				// if backgroundEnabled is true
+				if (backgroundEnabled == true)
+				{
+					// _compassBackground game object is active
+					_compassBackground.gameObject.SetActive(true);
+
+					// Debug Log compass background image is enabled
+					//Debug.Log("The compass background image is enabled");
+
+				} // close if backgroundEnabled is true
+
+				// else if backEnabled is false
+				else if (backgroundEnabled == false)
+				{
+					// _compassBackground game object is not active
+					_compassBackground.gameObject.SetActive(false);				
+
+					// Debug Log compass background image is disabled
+					//Debug.Log("The compass background image is disabled");
+
+				} // close else if backgroundEnabled is false
+
+				// if foregroundEnabled is true
+				if (foregroundEnabled == true)
+				{
+					// _compassForeground game object is active
+					_compassForeground.gameObject.SetActive(true);
+
+					// Debug Log compass foreground image is enabled
+					//Debug.Log("The compass foreground image is enabled");
+
+				} // close if foregroundEnabled is true
+
+				// else if foregroundEnabled is false
+				else if (foregroundEnabled == false)
+				{
+					// _compassForeground game object is not active
+					_compassForeground.gameObject.SetActive(false);				
+
+					// Debug Log compass foreground image is disabled
+					//Debug.Log("The compass foreground image is disabled");
+
+				} // close else if foregroundEnabled is false
+
+				// if textEnabled is true
+				if (textEnabled == true)
+				{
+					// _compassDirection game object is active
+					_compassDirection.gameObject.SetActive(true);
+
+					// Debug Log compass direction text is enabled
+					//Debug.Log("The compass direction text is enabled");
+
+				} // close if textEnabled is true
+
+				// else if textEnabled is false
+				else if (textEnabled == false)
+				{
+					// _compassDirection game object is not active
+					_compassDirection.gameObject.SetActive(false);				
+
+					// Debug Log compass direction text is disabled
+					//Debug.Log("The compass direction text is disabled");
+
+				} // close else if textEnabled is false
+
+				// if chevronEnabled is true
+				if (chevronEnabled == true)
+				{
+					// _chevronIcon game object is active
+					_chevronIcon.gameObject.SetActive(true);
+
+					// Debug Log compass chevron icon is enabled
+					//Debug.Log("The compass chevron icon is enabled");
+
+				} // close if chevronEnabled is true
+
+				// else if chevronEnabled is false
+				else if (chevronEnabled == false)
+				{
+					// _chevronIcon game object is not active
+					_chevronIcon.gameObject.SetActive(false);				
+
+					// Debug Log compass chevron icon is disabled
+					//Debug.Log("The compass chevron icon is disabled");
+
+				} // close else if chevronEnabled is false
+
 			} // close if compassEnabled is true
 
 			// else if compassEnabled is false
 			else if (compassEnabled == false)
 			{
-				// _compassDirection game object is not active
-				_compassDirection.gameObject.SetActive(false);
-
 				// _compassBackground game object is not active
 				_compassBackground.gameObject.SetActive(false);
 
+				// Debug Log compass background image is disabled
+				//Debug.Log("The compass background image is disabled");
+
 				// _compassForeground game object is not active
 				_compassForeground.gameObject.SetActive(false);
+
+				// Debug Log compass foreground image is disabled
+				//Debug.Log("The compass foreground image is disabled");	
+
+				// _compassDirection game object is not active
+				_compassDirection.gameObject.SetActive(false);
+
+				// Debug Log compass direction text is disabled
+				//Debug.Log("The compass direction text is disabled");	
+
+				// _chevronIcon game object is not active
+				_chevronIcon.gameObject.SetActive(false);
+
+				// Debug Log compass chevron icon is disabled
+				//Debug.Log("The compass chevron icon is disabled");								
 
 				// Get Component Compass is not enabled
 				GetComponent<Compass>().enabled = false;
 
 				// Debug Log compass is disabled
-				//Debug.Log("The compass is disabled");
+				//Debug.Log("The compass component is disabled");
 
 			} // close else if compassEnabled is false
 
