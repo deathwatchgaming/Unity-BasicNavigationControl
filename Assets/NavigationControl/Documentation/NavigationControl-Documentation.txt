@@ -348,7 +348,7 @@ Rect Transform Anchors: middle & center *
 
 Position: X: -357 Y: 486 Z: 0
 Width: 1152
-Height: 77
+Height: 78
 Scale: X: 0.875 Y: 1 Z: 1
 
 12.D)Add / Import the actual image to your project: "CompassBackground.png"
@@ -396,7 +396,7 @@ Rect Transform Anchors: middle & center *
 
 Position: X: -357 Y: 486 Z: 0
 Width: 1152
-Height: 77
+Height: 78
 Scale: X: 1 Y: 1 Z: 1
 
 13.D) Add / Import the actual image to your project: "CompassForeground.png"
@@ -536,7 +536,7 @@ Rect Transform Anchors: Top & Center
 Position: X: -357 Y: 436 Z: 0
 
 Width: 1920 
-Height: 77
+Height: 78
 
 
 ----------------------------------------------------------------------------------------
