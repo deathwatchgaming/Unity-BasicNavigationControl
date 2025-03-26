@@ -11,14 +11,11 @@ Description:
 ![Preview](https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Previews/BasicNavigationControl-Preview.png)
 
 
-
-
  The "Compass" and or "Minimap" need some sort of "Player Controller" to work
  and are reliant on such, thus one would not be able to test such if they do
  not already have one to test stufff with. As such provided is just a
  simple "FirstPersonController" for testing stuff if the end-user needs such
  and does not already have something.
-
 
 
 REPO NOTE: The purpose of this new repository was decided upon recently when
