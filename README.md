@@ -32,6 +32,10 @@ As such this will be the new repository for such simply provided as a
 starting point for users whom wish to use such in their projects and then
 improve upon such as they desire.
 
+NOTE: This currently still uses the Old Input System, so as such depending on
+what version of Unity you may be using it may be necessary to make sure such
+or both is enabled in project settings.
+
 
 Player Controls: 
 ----------------
