@@ -41,12 +41,17 @@ Player Controls:
   Note: The following found below are related to the provided playercontrol script for usage example.
 
 
+Old_Input_System Variant:
+
 * Player Forward:   W
 * Player Reverse:   S
 * Player Left:      A
 * Player Right:     D
 * Player Jump:      Space
 * Player Sprint:    Left Shift
+
+
+New_Input_System Variant: Coming soon...
 
 
 Manual Setup Instruction:
@@ -60,7 +65,13 @@ PlayerControl:
 --------------
 
 
-* Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
+Old_Input_System Variant: Coming soon...
+
+
+* Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
+
+
+New_Input_System Variant: Coming soon...
 
 
 
@@ -68,25 +79,42 @@ Compass:
 --------
 
 
-* Compass documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+Old_Input_System Variant: Coming soon...
+
+
+* Compass documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
+
+
+New_Input_System Variant:
 
 
 Cursor:
 -------
 
 
-* Cursor documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Assets/NavigationControl/Cursor/Documentation/Cursor-Documentation.txt
+Old_Input_System Variant: Coming soon...
+
+
+* Cursor documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/NavigationControl/Cursor/Documentation/Cursor-Documentation.txt
+
+
+New_Input_System Variant: Coming soon...
 
 
 Minimap:
 --------
 
 
-* Minimap Follow documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Assets/NavigationControl/Minimap/Documentation/MinimapFollow-Documentation.txt
+Old_Input_System Variant:
 
 
-* Minimap Tactical Marker documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Assets/NavigationControl/Minimap/Documentation/MinimapTacticalMarker-Documentation.txt
+* Minimap Follow documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/NavigationControl/Minimap/Documentation/MinimapFollow-Documentation.txt
 
+
+* Minimap Tactical Marker documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/NavigationControl/Minimap/Documentation/MinimapTacticalMarker-Documentation.txt
+
+
+New_Input_System Variant: Coming soon...
 
 
 
@@ -94,7 +122,11 @@ All Combined Documentation:
 ---------------------------
 
 
-* All combined documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Assets/NavigationControl/Documentation/NavigationControl-Documentation.txt
+Old_Input_System Variant:
 
 
+* All combined documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/NavigationControl/Documentation/NavigationControl-Documentation.txt
+
+
+New_Input_System Variant: Coming soon...
 
