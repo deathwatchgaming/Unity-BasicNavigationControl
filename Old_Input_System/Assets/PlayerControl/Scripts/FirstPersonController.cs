@@ -1,5 +1,5 @@
 /*
- * Name: FirstPersonController
+ * Name: FirstPersonController (Old Input System)
  * File: FirstPersonController.cs
  * Author(s): DeathwatchGaming
  * License: MIT
