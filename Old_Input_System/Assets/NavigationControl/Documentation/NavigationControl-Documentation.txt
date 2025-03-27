@@ -16,6 +16,7 @@ Player Left:      A
 Player Right:     D
 Player Jump:      Space
 Player Sprint:    Left Shift
+Look:             Mouse
 
 If minimap tactical markers is used / added:
 
