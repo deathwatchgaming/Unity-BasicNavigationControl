@@ -65,7 +65,7 @@ PlayerControl:
 --------------
 
 
-Old_Input_System Variant: Coming soon...
+Old_Input_System Variant:
 
 
 * Example player control documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/PlayerControl/Documentation/PlayerControl-Documentation.txt
@@ -79,20 +79,20 @@ Compass:
 --------
 
 
-Old_Input_System Variant: Coming soon...
+Old_Input_System Variant:
 
 
 * Compass documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
 
 
-New_Input_System Variant:
+New_Input_System Variant: Coming soon...
 
 
 Cursor:
 -------
 
 
-Old_Input_System Variant: Coming soon...
+Old_Input_System Variant:
 
 
 * Cursor documentation: https://github.com/deathwatchgaming/Unity-BasicNavigationControl/blob/main/Old_Input_System/Assets/NavigationControl/Cursor/Documentation/Cursor-Documentation.txt
