@@ -1,0 +1,88 @@
+Cursor Setup
+--------------------------------------------------------------------------------
+
+Description: Add a optional cursor for your Unity Projects
+
+
+Manual Setup Instruction:
+-------------------------
+
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Step 1 (Optional *): Create in Canvas -> Cursor (Holder) -> Cursor_Image (RawImage)
+
+-----------------------------------------------------------------------------------
+
+
+* Note: this step is optional and is up to your preference.
+
+* Also Note: If you have already applied this say for example via the compass
+  setup instructions, then you can simply ignore/skip this.
+
+1.A) Go back into "Canvas" and create "Empty" and name it: "Cursor" *
+     * This is a "Holder" that we will use to attach a script to.
+
+1.B) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Middle & Center
+
+Position: X: 0  Y: 0  Z: 0
+Width: 64
+Height: 64
+
+
+1.C) Now go into "Cursor", and create "RawImage" and name it: "Cursor_Image"
+
+1.D) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Middle & Center
+
+Position: X: 0  Y: 0  Z: 0
+Width: 64
+Height: 64
+
+
+Add Raw Image
+------------------
+
+Texture: Cursor
+
+
+Last Step: Add Component / Script
+---------------------------------
+
+1.E) In: UI -> Canvas - Cursor
+     
+     Add component / script: "Cursor.cs"
+
+1.F) Ok, now fill out the related settings:
+
+
+For -> Cursor (Script):
+--------------------------------
+
+Script: Cursor
+Cursor Image : Cursor_Image (Raw Image)
+Cursor Enabled: Check * Checked by default
+
+
+-----------------------------------------------------------------------------------
+
+
+That is it and concludes the optional Cursor setup steps.
+
+Best of Luck!

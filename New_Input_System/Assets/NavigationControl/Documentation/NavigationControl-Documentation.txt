@@ -1,0 +1,930 @@
+Basic Navigation Control (Basic Setup Steps)
+
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic Player Controller, Compass, Cursor, Minimap and Minimap
+tactical marker for your Unity projects.
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Manual Setup Instruction:
+-------------------------
+
+
+* Simply follow the instruction for manual setup found below.
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 100 Y: 1     Z: 100
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Position: X: -500 Y: 0 Z: -500 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: 0 
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footsep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+------------------------------------------------------------------------------------
+
+Step 10: Interface & Canvas
+
+------------------------------------------------------------------------------------
+
+
+1.A) Create an empty object called: "Interface"
+
+Add Layer: "UI"
+
+1.B) Inside the new "Interface", then create a UI: -> "Canvas"
+
+Add Layer: "UI"
+
+Note: You can set your canvas up how you want, that is why I did not comment much 
+      on such. Same goes fo uvRect on things within the UI canvas as that is perhaps 
+      personal prefs and for these instructions one assumed one would just start with 
+      the default middle center such and tweak such from there.
+
+     * Such is up to the end-user and their prefs, but just so noone says I left it 
+     out, so here is just one "Canvas" example:
+
+      UI Scaler: 
+      ----------
+
+      UI Scale Mode: Scale With Screen Size
+      Reference Resolution: X: 1920 Y: 1080
+      Match: 0 (Width)
+      Reference Pixels Per: 1920
+
+      
+10.C) Inside the "Canvas", create a new empty called: "Compass"
+     * Note: This will house all the compass related stuff
+
+10.D) Add / Modify Details for "Compass":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: 357 Y: -229 Z: 0
+Width: 100
+Height: 100     
+
+
+------------------------------------------------------------------------------------
+
+Step 11: Text Mesh Pro Text
+
+------------------------------------------------------------------------------------
+
+
+11.A) Inside "Compass", create a UI: -> "Text Mesh Pro (TMP)" and rename it 
+     to: "Compass_DegreeText" *
+
+     * Layer should also be "UI"
+
+11.B) Add / Modify Details for "Compass_DegreeText":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 338 Z: 0
+Width: 200
+Height: 200
+
+Text: 360
+Font: LiberationSans SDF
+Material Preset: LiberationSans SDF Material
+Font Style: Bold
+Font Size: 48
+Vertex Color: Hex: #FFFFFF
+Alignment: Center & Top
+Overflow: Overflow
+
+
+Next step, we add the "Compass Chevron Icon": 
+
+
+Create in Interface -> Canvas -> Compass: "CompassChevron (Image)"
+
+
+A) Add / import the image file found in the textures directory into your project
+
+Import as: Sprite (2D and UI)
+Sprite Mode: Single
+Compression: None
+
+B) In Interface > Canvas > Compass: as a child of, add a UI -> "Image:"
+
+Rename "Image" to: "Compass_Chevron"
+
+Rect Transform:
+
+Top Center
+
+Pos X: -357
+Pos Y: 377
+
+Width: 38
+Height: 23
+
+Source Image: CompassChevron
+
+
+In: 
+
+"Compass" let us compensate for the adding of chevron icon for example:
+
+"Compass"
+
+Rect Transform:
+
+Pos X: 357
+Pos Y: -527
+
+
+In: 
+
+"Compass_DegreeText" let us compensate for the adding of chevron icon for example:
+
+"Compass_DegreeText"
+
+Rect Transform:
+
+Pos X: -357
+Pos Y: 317
+
+Font Size: 48
+
+
+Lastly:
+
+
+On "Compass" edit:
+
+Chevron Icon: Compass_Chevron (Image)
+Chevron Enabled: Checked
+
+
+------------------------------------------------------------------------------------
+
+Step 12: RawImage 1
+
+------------------------------------------------------------------------------------
+
+
+12.A) Inside "Compass", create a UI: -> RawImage
+
+12.B) Rename the "RawImage" to: "Compass_Background"
+
+12.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 78
+Scale: X: 0.875 Y: 1 Z: 1
+
+12.D)Add / Import the actual image to your project: "CompassBackground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+
+ Then select "Apply" to apply the changes.
+
+ 12.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into UI -> "Compass_Background" via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassBackground.png"
+
+ Color: set "rgba" as follows:
+
+ R: 127
+ G: 127
+ B: 127
+ A: 25     
+
+
+------------------------------------------------------------------------------------
+
+Step 13: RawImage 2
+
+------------------------------------------------------------------------------------
+
+
+13.A) Inside "Compass", create a UI: -> RawImage
+
+13.B) Rename the "RawImage" to: "Compass_Foreground"
+
+13.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 78
+Scale: X: 1 Y: 1 Z: 1
+
+13.D) Add / Import the actual image to your project: "CompassForeground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+ Wrap Mode: Repeat * 
+
+ * Note: This is very important for compass to rotate / display correctly!
+
+ Then select "Apply" to apply the changes.
+
+ 13.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into UI -> "Compass_Foreground" via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassForeground.png"    
+
+
+------------------------------------------------------------------------------------
+
+Step 14: Add Component / Script
+
+------------------------------------------------------------------------------------
+
+
+14.A) Go back to: UI -> Canvas - Compass
+     
+     Add component / script: "Compass.cs"
+
+14.B) Ok, now fill out the related settings:
+
+For -> Compass (Script):
+--------------------------------
+
+Script: Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+Chevron Icon: Compass_Chevron (Image)
+Player: Player (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Background Enabled: Check this 
+Foreground Enabled: Check this 
+Text Enabled: Check this 
+Chevron Enabled: Check this 
+Compass Enabled: Check this 
+
+
+-------------------------------------------------------------------------------------
+
+
+Alright, now that is it for Compass setup! Simple enough, right?! Best of Luck!
+
+
+------------------------------------------------------------------------------------
+
+NOTE: On Changing Transform Anchors & Stretching Compass Out
+
+------------------------------------------------------------------------------------
+
+
+As noted in previous instructions this was mentioned:
+
+"Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later"
+
+
+ Here is just one basic example of saying moving the transform anchors from
+ "Middle & Center" to: "Top & Center" and then say for example: stretching the
+ compass across the top and scaling the font to reflect such just for an example.
+
+
+----------------------------------------------------------------------------------------
+
+Compass (Holder):
+
+----------------------------------------------------------------------------------------
+
+
+Modify for example:
+
+Rect Transform Anchors: Top & Center
+
+Position: X: 357 Y: -537 Z: 0
+
+
+----------------------------------------------------------------------------------------
+
+Compass Degree Text (TMP) (Text):
+
+----------------------------------------------------------------------------------------
+
+
+Modify for example:
+
+Rect Transform Anchors: Top & Center
+
+Position: X: -357 Y: 288 Z: 0 
+
+Font Size: 66
+
+
+----------------------------------------------------------------------------------------
+
+Compass Background (Image):
+
+----------------------------------------------------------------------------------------
+
+
+Modify for example:
+
+Rect Transform Anchors: Top & Center
+
+Position: X: -357 Y: 436 Z: 0
+
+Width: 1920 
+Height: 97
+
+
+----------------------------------------------------------------------------------------
+
+Compass (Image):
+
+----------------------------------------------------------------------------------------
+
+
+Modify for example:
+
+Rect Transform Anchors: Top & Center
+
+Position: X: -357 Y: 436 Z: 0
+
+Width: 1920 
+Height: 78
+
+
+----------------------------------------------------------------------------------------
+
+
+Alright, now that is it for that! Simple enough, right?! Best of Luck!
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: Import Images:
+
+-----------------------------------------------------------------------------------
+
+
+Texture / Images:
+-----------------
+
+Minimap:
+--------
+
+MiniMapMask.png
+MiniMapFrame.png
+PlayerIcon.png
+
+Cursor:
+-------
+
+Cursor.png
+
+
+Import Images and select them and modify settings for each as found below:
+
+Texture Type: Sprite (2D and UI)
+Compression: None
+
+Select "Apply" to apply the changes.
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Add Tag: "Player" to PlayerController and also create new layer: "MiniMap"
+
+-----------------------------------------------------------------------------------
+
+
+16.A) Add the Tag: "Player" to your PlayerController unless this is already applied.
+
+Note: The next step "16.B" is completely unrelated from the last step "16.A", but, 
+let us get it out of the way now just to be prepared.
+
+16.B) Add a new layer called: "MiniMap" * this will be used later
+
+
+-----------------------------------------------------------------------------------
+
+Step 17: Create in Interface -> Canvas -> Create Empty -> Minimap (Holder)
+
+-----------------------------------------------------------------------------------
+
+
+17.A) Inside "Canvas", create an "Empty" and rename it to "Minimap"
+
+Note: this will be our Minimap "holder".
+
+17.B) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Bottom & Right
+
+Position: X: -155  Y: 250  Z: 0
+Width: 256
+Height: 256
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Create in Minimap -> Create Minimap_Mask (RawImage)
+
+-----------------------------------------------------------------------------------
+
+
+18.A) Inside "Minimap", create a new: "RawImage" and name it "Minimap_Mask"
+
+18.B) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Middle & Center
+
+Position: X: 0  Y: 0  Z: 0
+Width: 256
+Height: 256
+
+
+Raw Image
+------------------
+
+Texture: MiniMapMask
+
+
+18.C) Add Component: Mask
+
+Modify:
+
+Mask (Script)
+-------------
+
+Show Mask Graphic: "Un-check this"
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Create in Minimap -> Minimap_Frame (RawImage)
+
+-----------------------------------------------------------------------------------
+
+
+19.A) Inside "Minimap", create a new: "RawImage" and name it "Minimap_Frame"
+
+19.B) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Middle & Center
+
+Position: X: 0  Y: 0  Z: 0
+Width: 256
+Height: 256
+
+Modify:
+
+Raw Image
+------------------
+
+Texture: MiniMapFrame
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Create in Minimap_Mask -> Minimap_Texture (RawImage) & Render "MinimapTexture"
+
+-----------------------------------------------------------------------------------
+
+
+20.A) Inside "Minimap_Mask, create a new: "RawImage" and name it: "Minimap_Texture"
+
+20.B) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Middle & Center
+
+Position: X: 0  Y: 0  Z: 0
+Width: 256
+Height: 256
+
+20.C) Create a new Render Texture called: "MinimapTexture"
+
+Now, go back into "Minimap_Texture" inspector and...
+
+Modify:
+
+Raw Image
+------------------
+
+Texture: MiniMapTexture
+
+
+-----------------------------------------------------------------------------------
+
+Step 21 (Optional *): Create in Canvas -> Cursor (Holder) -> Cursor_Image (RawImage)
+
+-----------------------------------------------------------------------------------
+
+
+* Note: this step is optional and is up to your preference.
+
+* Also Note: If you have already applied this say for example via the compass
+  setup instructions, then you can simply ignore/skip this step and simply
+  continue on to step 22.
+
+
+Else if not, and you want the cursor then you can continue here:
+
+
+21.A) Go back into "Canvas" and create "Empty" and name it: "Cursor" *
+     * This is a "Holder" that we will use to attach a script to.
+
+21.B) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Middle & Center
+
+Position: X: 0  Y: 0  Z: 0
+Width: 64
+Height: 64
+
+
+21.C) Now go into "Cursor", and create "RawImage" and name it: "Cursor_Image"
+
+21.D) Make sure the "Layer" is set as: "UI"
+
+Modify:
+
+Rect Transform
+---------------
+
+Anchors: Middle & Center
+
+Position: X: 0  Y: 0  Z: 0
+Width: 64
+Height: 64
+
+
+Add Raw Image
+------------------
+
+Texture: Cursor
+
+
+Last Step: Add Component / Script
+---------------------------------
+
+21.E) In: UI -> Canvas -> Cursor
+     
+     Add component / script: "Cursor.cs"
+
+21.F) Ok, now fill out the related settings:
+
+
+For -> Cursor (Script):
+--------------------------------
+
+Script: Cursor
+Cursor Image : Cursor_Image (Raw Image)
+Cursor Enabled: Check * Checked by default
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Create in PlayerController -> Player_Icon
+
+-----------------------------------------------------------------------------------
+
+
+22.A) Inside your "PlayerController", create an "Empty" & rename it to "Player_Icon"
+
+22.B) Make sure the "Layer" is set as: "MiniMap"
+
+Modify:
+
+Transform:
+----------
+
+Position: X: 0    Y: 6   Z: 0
+Rotation: X: 0    Y: 0   Z: 0
+Scale:    X: 1    Y: 1   Z: 1
+
+22.C) Inside "Player_Icon", create a 3D Object: "Plane" & rename it to "Icon"
+
+22.D) Make sure the "Layer" is set as: "MiniMap"
+
+Modify:
+
+Transform:
+----------
+
+Position: X: 0    Y:   0    Z: 0
+Rotation: X: 0    Y: -90    Z: 0
+Scale:    X: 1.5  Y: 1.5    Z: 1.5
+
+Mesh Renderer:
+--------------
+
+In Lighting:
+
+Cast Shadows: Off
+Receive Shadows: Un-check
+
+22.E) Add material by dragging "PlayerIcon.png" onto Inspector below component
+      button.
+
+Modify:
+
+PlayerIcon
+--------------
+
+Rendering Mode: Cutout
+Alpha Cutoff: 0.05
+Smoothness: 0 
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Create in "Icon" -> Minimap_Camera
+
+-----------------------------------------------------------------------------------
+
+
+23.A) Inside "Icon", create a "Camera" & rename it to "Minimap_Camera"
+
+23.B) Make sure the "Layer" is set as: "MiniMap"
+
+23.C) Now we need to tie this to the Player so we need to drag this to the holder:
+      "PlayerController" as this will get the position.  After such, let us now 
+      "Zero Out" everything.
+
+Modify like so:
+
+Position: X: 0  Y: 0  Z: 0
+Rotation: X: 0  Y: 0  Z: 0
+Scale:    X: 1  Y: 1  Z: 1
+
+23.D) Now we need to make this independent, so we need to drag this outside of
+      everything and place it at the very bottom of scene below all. In essence
+      (not inside anything) as this will grab the world-space position. You will 
+      now see some numbers change as that is now grabbing the world-space position.
+
+23.E) After such we need to change only the Y / Height position to raise it way up.
+
+Modify:
+
+Position: Y: 1100
+
+23.F) Now let us change some camera settings.
+
+Remove Component: Flare
+Remove Component: Audio Listener
+
+Change these as follows:
+
+Camera:
+-------
+
+Clear Flags: Solid Color
+Background: #000000
+Culling Mask: Change to "Nothing" to unselect everything & then do select "MiniMap"
+Projection: Orthographic
+Size: 50
+Far: 5000
+Depth: 10
+Target Texture: MinimapTexture
+
+Transform:
+----------
+
+Rotation: X: 90
+
+23.G) Next, change your terrain to have the "Layer" set as: "MiniMap"
+
+23.H) Add Component (Script): "MinimapFollow.cs" to "Minimap_Camera"
+
+Modify:
+
+Mini Map Follow (Script):
+-------------------------
+
+Script: MinimapFollow
+Rotate With Player: "Checked" -> Yes 
+Minimap Height: 1100
+Minimap Enabled: "Checked" -> Yes 
+Minimap Mask: Mask (Raw Image)
+Minimap Texture: MinimapTexture (Raw Image)
+Minimap Frame: MinimapFrame (Raw Image)
+
+Note: "Rotate With Player" is optional and is up to your preference to use or not.
+
+
+----------------------------------------------------------------------------------------
+
+
+Alright, now that is it for that! Simple enough, right?! Best of Luck!
+
