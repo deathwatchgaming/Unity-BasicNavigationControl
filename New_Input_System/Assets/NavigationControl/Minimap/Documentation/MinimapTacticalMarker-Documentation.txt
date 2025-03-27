@@ -226,6 +226,13 @@ Tactical Marker: TacticalMarker
 
 Tactical Marker Enabled: Checked -> Yes
 
+Also edit:
+
+Input Actions:
+--------------
+
+Minimap Controls: MinimapControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
