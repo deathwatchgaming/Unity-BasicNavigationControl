@@ -17,6 +17,10 @@ Player Right:     D
 Player Jump:      Space
 Player Sprint:    Left Shift
 
+If minimap tactical markers is used / added:
+
+Tactical Marker:  T 
+
 
 Manual Setup Instruction:
 -------------------------
