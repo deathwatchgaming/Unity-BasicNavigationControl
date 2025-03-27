@@ -104,7 +104,7 @@ Canvas Scaler
 UI Scale Mode: Scale with Screen Size
 Reference Resolution: X: 1920  Y: 1080
 Match: Width
-Reference Pixels Per: 1920
+Reference Pixels Per: 100
 
 
 -----------------------------------------------------------------------------------

@@ -228,7 +228,7 @@ Note: You can set your canvas up how you want, that is why I did not comment muc
       UI Scale Mode: Scale With Screen Size
       Reference Resolution: X: 1920 Y: 1080
       Match: 0 (Width)
-      Reference Pixels Per: 1920
+      Reference Pixels Per: 100
 
       
 10.C) Inside the "Canvas", create a new empty called: "Compass"
