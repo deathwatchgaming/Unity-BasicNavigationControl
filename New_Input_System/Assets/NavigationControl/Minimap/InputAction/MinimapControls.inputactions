@@ -1,0 +1,45 @@
+{
+    "name": "MinimapControls",
+    "maps": [
+        {
+            "name": "Minimap",
+            "id": "931b2227-51ae-42d7-b488-2eb68fe2871a",
+            "actions": [
+                {
+                    "name": "TacticalMarker",
+                    "type": "Button",
+                    "id": "eb31dee3-b490-4e28-8715-4e0883496e51",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9bedec47-051d-42b8-9bdd-2c4498fc3658",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TacticalMarker",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c793e1ca-b748-4be9-bf17-e25acd6ee1b5",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TacticalMarker",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

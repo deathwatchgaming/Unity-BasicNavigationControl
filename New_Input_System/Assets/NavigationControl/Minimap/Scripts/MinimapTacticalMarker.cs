@@ -1,5 +1,5 @@
 /*
-*  Name: Minimap Tactical Marker
+*  Name: Minimap Tactical Marker (New Input System)
 *  File: MinimapTacticalMarker.cs
 *  Author: DeathwatchGaming
 *  License: MIT
@@ -7,6 +7,7 @@
 
 // using
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 // namespace NavigationControl
 namespace NavigationControl
@@ -30,7 +31,19 @@ namespace NavigationControl
 			// bool tacticalMarkerEnabled
 			public bool tacticalMarkerEnabled = true;
 
+		// Header Input Actions
+		[Header("Input Actions")]
+
+			// Tooltip
+			[Tooltip("The input action asset")]
+
+			// InputActionAsset _minimapControls
+			[SerializeField] private InputActionAsset _minimapControls;
+
 		// Private
+
+		// InputAction _tacticalMarkerAction	
+		private InputAction _tacticalMarkerAction;			
 
 		// Camera _firstPersonCamera
 		private Camera _firstPersonCamera;
@@ -51,7 +64,31 @@ namespace NavigationControl
 		private string MARKER_ID = "*NONE*";  // This is to keep track of its existence in the world
 
 		//  MinimapTacticalMarker _minimapTacticalMarker
-		public static MinimapTacticalMarker _minimapTacticalMarker;		
+		public static MinimapTacticalMarker _minimapTacticalMarker;
+
+		// private void Awake
+		private void Awake()
+		{
+			// _tacticalMarkerAction
+			_tacticalMarkerAction = _minimapControls.FindActionMap("Minimap").FindAction("TacticalMarker");
+
+		} // close private void Awake
+
+		// private void OnEnable
+		private void OnEnable()
+		{
+			// _tacticalMarkerAction Enable
+			_tacticalMarkerAction.Enable();
+
+		} // close private void OnEnable
+
+		// private void OnDisable
+		private void OnDisable()
+		{
+			// _tacticalMarkerAction Disable
+			_tacticalMarkerAction.Disable();
+
+		} // close private void OnDisable
 
 		// Start is use for initialization
 
@@ -87,7 +124,7 @@ namespace NavigationControl
 				//Debug.Log("Minimap Tactical Marker is enabled.");
 
 				// if Input GetKeyUp KeyCode T
-				if (Input.GetKeyUp(KeyCode.T))
+				if (_tacticalMarkerAction.triggered)
 				{
 					// PlaceMarker
 					PlaceMarker();
