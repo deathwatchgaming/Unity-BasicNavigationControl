@@ -36,7 +36,6 @@ namespace NavigationControl
 
 			// Tooltip
 			[Tooltip("The input action asset")]
-
 			// InputActionAsset _minimapControls
 			[SerializeField] private InputActionAsset _minimapControls;
 
